@@ -5,7 +5,8 @@ var searchInput = document.getElementById("searchInput");
 // Result list
 var showResult = document.getElementById('show-superhero-result');
 // Favorite Array
-var favArray = [];
+var favIdArray = [];
+var favListArray = [];
 // Function to search for superhero
 function superheroSearch(input){
 
@@ -31,11 +32,12 @@ function superheroSearch(input){
           
           // Create a list item and append to the list
           var li = document.createElement("li");
+          // li.className = "li";
           console.log(li);
           // add a list with the name and image of the superhero and style it
          li.innerHTML = '<a href="" class="seRe" id="'+list.id+'">'+
           '<img class="result-img" src="'+list.image.url+'" alt="">'+list.name+'</a>'+
-          '<div class="addFav" id="'+list.id+'"><i class="fa-regular fa-heart"></i></div>';
+          '<div class ="addFav" id="'+list.id+'" data-name="'+list.name+'" data-image="'+list.image.url+'"><i class="fa-regular fa-heart"></i></div>';
           
           showResult.appendChild(li);
         }
@@ -59,24 +61,26 @@ function superheroSearch(input){
           i.addEventListener('click', function(e){
 
           // return true or false if this.id is in the array
-          var idAlreadPresent = favArray.includes(this.id);
+          var idAlreadPresent = favIdArray.includes(this.id);
           console.log(idAlreadPresent);
           
 
           if(idAlreadPresent == false){
             e.preventDefault();
-            favArray.push(this.id);
-            localStorage.setItem('favArray', JSON.stringify(favArray));
-            console.log(favArray);
+            favIdArray.push(this.id);
+            favListArray.push({id: this.id, name: this.dataset.name, imageUrl: this.dataset.image});
+            localStorage.setItem('favArray', JSON.stringify(favListArray));
+            console.log(favIdArray, favListArray);
             // change the icon to a filled heart icon into solid heart icon 
            this.innerHTML = '<i class="fa-solid fa-heart"></i>';
           }else{
             // find the index of this.id in the array
-            var index = favArray.indexOf(this.id);
+            var index = favIdArray.indexOf(this.id);
             // remove the index from the array
-            favArray.splice(index, 1);
-            localStorage.setItem('favArray', JSON.stringify(favArray)); 
-            console.log(favArray);
+            favIdArray.splice(index, 1);
+            favListArray.splice(index, 1);
+            localStorage.setItem('favArray', JSON.stringify(favListArray)); 
+            console.log(favIdArray, favListArray);
             this.innerHTML = '<i class="fa-regular fa-heart"></i>';
           }
           });
