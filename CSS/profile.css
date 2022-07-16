@@ -1,0 +1,40 @@
+body{
+    background-color: aliceblue;
+}
+.backgroudStyle {
+    background-color: lightgoldenrodyellow;
+    border-radius: 20px;
+}
+
+.textColor {
+    color: green;
+}
+
+#superHeroImg{
+    height:250px;
+    width:250px;
+    border-radius: 10%;
+}
+
+h4{
+    margin-left: 10%;
+}
+
+
+/* Media Query */
+@media only screen and (max-width: 450px) {
+    #superHeroImg{
+        height:70%;
+        width:70%;
+        border-radius: 10%;
+    }
+    h4{
+        margin-left: 0%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    h4{
+        margin-left: 0%;
+    }
+}

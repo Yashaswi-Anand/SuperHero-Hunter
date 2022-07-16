@@ -9,11 +9,23 @@ function showAllFavorites(){
             console.log(i);
             var li = document.createElement("li");
             // add a list with the name and image of the superhero and style it
-            li.innerHTML = '<img class="result-img" src="'+i.imageUrl+'" alt="">'+i.name+'<div class="removeFav" id="'+i.id+'"><i class="fa-solid fa-trash-can deteteBtn"></i></div>';
+            li.innerHTML = '<img class="result-img" id="'+i.id+'" src="'+i.imageUrl+'" alt="">'+i.name+'<div class="removeFav" id="'+i.id+'"><i class="fa-solid fa-trash-can deteteBtn"></i></div>';
             
             listDiv.appendChild(li);
         }
 
+         // Add event listener to the list items for show profile page
+         var listItems = document.getElementsByClassName("result-img");
+         console.log(listItems);
+         for(let i of listItems){
+           i.addEventListener('click', function(e){
+             e.preventDefault();
+             console.log(this.id);
+             localStorage.setItem('superheroId', this.id);
+             window.location.href = "./profile.html";
+           });
+         }
+         
         // Add event listener to the remove favourite button
         var removeFav = document.getElementsByClassName("removeFav");
         console.log(removeFav);

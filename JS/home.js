@@ -50,7 +50,7 @@ function superheroSearch(input){
             e.preventDefault();
             console.log(this.id);
             localStorage.setItem('superheroId', this.id);
-            window.location.href = "./profile.html";
+            window.location.href = "./HTML/profile.html";
           });
         }
         
@@ -71,7 +71,7 @@ function superheroSearch(input){
             favListArray.push({id: this.id, name: this.dataset.name, imageUrl: this.dataset.image});
             localStorage.setItem('favArray', JSON.stringify(favListArray));
             console.log(favIdArray, favListArray);
-            // change the icon to a filled heart icon into solid heart icon 
+            // change the icon to a filled heart icon into solid heart icon
            this.innerHTML = '<i class="fa-solid fa-heart"></i>';
           }else{
               // find the index of this.id in the array
