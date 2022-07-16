@@ -36,7 +36,7 @@ function superheroSearch(input){
           console.log(li);
           // add a list with the name and image of the superhero and style it
          li.innerHTML = '<a href="" class="seRe" id="'+list.id+'">'+
-          '<img class="result-img" src="'+list.image.url+'" alt="">'+list.name+'</a>'+
+          '<img class="result-img" src="'+list.image.url+'" alt=""></a>'+ list.name +
           '<div class ="addFav" id="'+list.id+'" data-name="'+list.name+'" data-image="'+list.image.url+'"><i class="fa-regular fa-heart"></i></div>';
           
           showResult.appendChild(li);
@@ -74,15 +74,14 @@ function superheroSearch(input){
             // change the icon to a filled heart icon into solid heart icon 
            this.innerHTML = '<i class="fa-solid fa-heart"></i>';
           }else{
-            // find the index of this.id in the array
-            var index = favIdArray.indexOf(this.id);
-            // remove the index from the array
-            favIdArray.splice(index, 1);
-            favListArray.splice(index, 1);
-            localStorage.setItem('favArray', JSON.stringify(favListArray)); 
-            console.log(favIdArray, favListArray);
-            this.innerHTML = '<i class="fa-regular fa-heart"></i>';
-          }
+              // find the index of this.id in the array
+              var index = favIdArray.indexOf(this.id);
+              // remove the index from the array
+              favIdArray.splice(index, 1);
+              favListArray.splice(index, 1);
+              localStorage.setItem('favArray', JSON.stringify(favListArray)); 
+              this.innerHTML = '<i class="fa-regular fa-heart"></i>';
+            }
           });
         }
     }

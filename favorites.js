@@ -9,7 +9,7 @@ function showAllFavorites(){
             console.log(i);
             var li = document.createElement("li");
             // add a list with the name and image of the superhero and style it
-            li.innerHTML = '<img class="result-img" src="'+i.imageUrl+'" alt="">'+i.name+'<div class="removeFav" id="'+i.id+'"><i class="fa-regular fa-heart"></i></div>';
+            li.innerHTML = '<img class="result-img" src="'+i.imageUrl+'" alt="">'+i.name+'<div class="removeFav" id="'+i.id+'"><i class="fa-solid fa-trash-can deteteBtn"></i></div>';
             
             listDiv.appendChild(li);
         }
