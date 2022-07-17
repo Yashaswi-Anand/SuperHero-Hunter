@@ -1,4 +1,4 @@
-html, body{
+body{
     height: 100%;
     font: 16px Arial;  
     background-image: url('../logo.jpg');
@@ -87,7 +87,7 @@ li{
 }
 
 .mt{
-    margin-top: 200px;
+    margin-top: 180px;
 }
 
 /*  Some media query for made resposive */
