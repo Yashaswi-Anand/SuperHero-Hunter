@@ -19,8 +19,8 @@ function superheroSearch(input){
   input.addEventListener('input', function(e){
     
     //console.log(this.value);
-    var url = "https://superheroapi.com/api/102180981809818/search/" + this.value;
-    xhrRequest.open('GET', url, true);
+    var url = "https://superheroapi.com/api/1182834895615033/search/"+this.value;
+    xhrRequest.open('GET', 'https://www.superheroapi.com/api.php/1182834895615033/search/'+this.value, true);
     
     // onload function to get data from API
     xhrRequest.onload = function(){
