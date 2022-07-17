@@ -1,5 +1,8 @@
 body{
     background-color: aliceblue;
+    background-image: url('../logo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .backgroudStyle {
     background-color: lightgoldenrodyellow;
@@ -32,10 +35,16 @@ h4{
     h4{
         margin-left: 0%;
     }
+    .backgroudStyle{
+        margin: 10px;
+    }
 }
 
 @media only screen and (max-width: 320px) {
 
+    .backgroudStyle{
+        margin: 10px;
+    }
     .textColorSize {
         margin-left: 0%;
         font-size: 16px;

@@ -19,21 +19,23 @@
      
     <main>
         
-        <div class="container" >
-            <div class="row p-3 ms-3 fixedLayout">
-                <div>
-                    <h1 style="color: blue; text-align:center;">SUPERHERO HUNTER</h1>
+        <div class="bg">
+            <div class="container" >
+                <div class="row p-3 ms-5 fixedLayout">
+                    <div>
+                        <h1 class="fontSize">SUPERHERO HUNTER</h1>
+                    </div>
+                    <div class="col-md-10 ms-5">
+                        <a href="./HTML/favorites.html"><h4 style="color: white; margin-left: 25px;">Favorites <i style="color: red;" class="fa fa-heart"></i> </h4></a>
+                        <input id="searchInput" type="text" placeholder="Superhero">
+                    </div>
                 </div>
-                <div class="col-md-10 ms-1">
-                    <a href="./HTML/favorites.html"><h4 class="textColorSize">Favorites List</h4></a>
-                    <input id="searchInput" type="text" placeholder="Superhero">
+                
+                <div class="col mt">
+                    <ul id="show-superhero-result"></ul>
                 </div>
-            </div>
             
-            <div class="col mt">
-                <ul id="show-superhero-result"></ul>
             </div>
-        
         </div>
 
 
