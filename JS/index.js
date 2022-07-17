@@ -12,14 +12,13 @@ var favListArray = [];
 // Function to search for superhero
 function superheroSearch(input){
 
-  // XMLHttpRequest to get data from API
+  // XMLHttpRequest object created
   var xhrRequest = new XMLHttpRequest();
 
   // URL to get data from each input text
   input.addEventListener('input', function(e){
     
     //console.log(this.value);
-    var url = "https://superheroapi.com/api/1182834895615033/search/"+this.value;
     xhrRequest.open('GET', 'https://www.superheroapi.com/api.php/1182834895615033/search/'+this.value, true);
     
     // onload function to get data from API
