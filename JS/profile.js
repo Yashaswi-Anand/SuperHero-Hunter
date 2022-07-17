@@ -1,9 +1,12 @@
 var superheroId = localStorage.getItem("superheroId");
 
 function fetchSuperheroProfile(){
+    // XMLHttpRequest object to get data from API
     var xhrRequest = new XMLHttpRequest();
+    
     xhrRequest.open('GET', 'https://www.superheroapi.com/api.php/1182834895615033/'+superheroId, true);
 
+    // onload function to get data from API
     xhrRequest.onload = function(){
         var responce = JSON.parse(xhrRequest.response);
         console.log(responce);

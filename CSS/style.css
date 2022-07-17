@@ -9,12 +9,13 @@ html, body{
 * {
     box-sizing: border-box;
 }
-
+/* backdround */
 .bg{
     background-image: url('../logo.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 
 input {
     border: 1px solid white;
@@ -67,7 +68,7 @@ li{
 .deteteBtn{
     color: red;
 }
-
+/* fixed input div for searching */
 .fixedLayout{
     position: fixed;
     top: 0;
@@ -89,6 +90,7 @@ li{
     margin-top: 200px;
 }
 
+/*  Some media query for made resposive */
 @media screen and (max-width: 450px) {
     #searchInput{
        width: 75%;

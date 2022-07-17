@@ -7,18 +7,22 @@ var showResult = document.getElementById('show-superhero-result');
 // Favorite Array
 var favIdArray = [];
 var favListArray = [];
+
+
 // Function to search for superhero
 function superheroSearch(input){
 
   // XMLHttpRequest to get data from API
   var xhrRequest = new XMLHttpRequest();
 
+  // URL to get data from each input text
   input.addEventListener('input', function(e){
     
     //console.log(this.value);
-  
-    xhrRequest.open('GET', 'https://www.superheroapi.com/api.php/1182834895615033/search/'+this.value, true);
-      
+    var url = "https://superheroapi.com/api/102180981809818/search/" + this.value;
+    xhrRequest.open('GET', url, true);
+    
+    // onload function to get data from API
     xhrRequest.onload = function(){
         //console.log(xhrRequest.response);
         var responceJson = JSON.parse(xhrRequest.response);
@@ -32,24 +36,26 @@ function superheroSearch(input){
           
           // Create a list item and append to the list
           var li = document.createElement("li");
-          // li.className = "li";
-          console.log(li);
           // add a list with the name and image of the superhero and style it
-         li.innerHTML = '<a href="" class="seRe" id="'+list.id+'">'+
+          li.innerHTML = '<a href="" class="each-item-list" id="'+list.id+'">'+
           '<img class="result-img" src="'+list.image.url+'" alt=""></a>'+ list.name +
           '<div class ="addFav" id="'+list.id+'" data-name="'+list.name+'" data-image="'+list.image.url+'"><i class="fa-regular fa-heart"></i></div>';
-          
+      
+          // Append the li element to the result list
           showResult.appendChild(li);
         }
 
         // Add event listener to the list items
-        var listItems = document.getElementsByClassName("seRe");
+        var listItems = document.getElementsByClassName("each-item-list");
         console.log(listItems);
         for(let i of listItems){
           i.addEventListener('click', function(e){
+            // e.preventDefault(); --> prevent the default action of the link
             e.preventDefault();
             console.log(this.id);
+            // locale storage to store the superhero id
             localStorage.setItem('superheroId', this.id);
+            // redirect to the superhero prifile page
             window.location.href = "./HTML/profile.html";
           });
         }
@@ -69,6 +75,7 @@ function superheroSearch(input){
             e.preventDefault();
             favIdArray.push(this.id);
             favListArray.push({id: this.id, name: this.dataset.name, imageUrl: this.dataset.image});
+            // Json stringify the array to store in local storage
             localStorage.setItem('favArray', JSON.stringify(favListArray));
             console.log(favIdArray, favListArray);
             // change the icon to a filled heart icon into solid heart icon
@@ -79,6 +86,7 @@ function superheroSearch(input){
               // remove the index from the array
               favIdArray.splice(index, 1);
               favListArray.splice(index, 1);
+              // Json.stringify to store the array in the locale storage
               localStorage.setItem('favArray', JSON.stringify(favListArray)); 
               this.innerHTML = '<i class="fa-regular fa-heart"></i>';
             }

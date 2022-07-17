@@ -4,11 +4,13 @@ function showAllFavorites(){
     var favArray = JSON.parse(localStorage.getItem('favArray'));
     console.log(favArray);
 
+    // if favArray is empty, show the message you have no favorites
     if(favArray.length == 0){
         listDiv.innerHTML = "<h1>You have no favorites yet!</h1>";
         return;
     }
     
+    // if favArray is not empty, show the list of favorites
     if(favArray){
         for(var i of favArray){
             console.log(i);
