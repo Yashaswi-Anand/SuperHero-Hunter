@@ -3,6 +3,11 @@ var listDiv = document.getElementById("fav-list");
 function showAllFavorites(){
     var favArray = JSON.parse(localStorage.getItem('favArray'));
     console.log(favArray);
+
+    if(favArray.length == 0){
+        listDiv.innerHTML = "<h1>You have no favorites yet!</h1>";
+        return;
+    }
     
     if(favArray){
         for(var i of favArray){

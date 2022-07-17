@@ -8,14 +8,6 @@ html body{
     box-sizing: border-box;
 }
 
-.bg{
-    background-image: url('https://i0.wp.com/www.art-mine.com/collectorscorner/wp-content/uploads/2018/06/The-Magic-Hour-2019-Acrylic-on-Canvas-3622-x-5422-3000-Rebecca-Katz.jpg?fit=885%2C490&ssl=1');
-    height: 100%; 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 input {
     border: 1px solid white;
     background-color: #f1f1f1;
@@ -78,6 +70,11 @@ li{
     z-index: 1;
 }
 
+h1{
+    text-align:center;
+    color: green;
+}
+
 .mt{
     margin-top: 150px;
 }
@@ -88,8 +85,14 @@ li{
     }
 
     li{
-        margin: 10px;
-        width: 70%;
-        padding: 10px;
+        font-size: 20px;
+        padding: 20px 40px;
+    }
+
+    .result-img{
+        width:80px;
+        height:80px;
+        border-radius: 50%;
+        margin-right: 5px;
     }
 }
