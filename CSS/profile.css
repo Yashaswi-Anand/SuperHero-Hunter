@@ -6,7 +6,7 @@ body{
     border-radius: 20px;
 }
 
-.textColor {
+.textColorSize {
     color: green;
 }
 
@@ -34,11 +34,12 @@ h4{
     }
 }
 
-@media only screen and (max-width: 768px) {
-    h4{
-        margin-left: 0%;
-    }
+@media only screen and (max-width: 320px) {
 
+    .textColorSize {
+        margin-left: 0%;
+        font-size: 16px;
+    }
     #superHeroImg{
         margin-left: 10%;
     }

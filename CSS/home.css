@@ -39,7 +39,7 @@ li{
     align-items: center;
     padding: 20px;
     border-radius: 10px;
-    margin: 20px;
+    margin: 10px;
     color: green;
     font-size: 25px;
 }
@@ -76,12 +76,12 @@ h1{
 }
 
 .mt{
-    margin-top: 150px;
+    margin-top: 200px;
 }
 
 @media screen and (max-width: 450px) {
     #searchInput{
-       width: 60%;
+       width: 75%;
     }
 
     li{
@@ -96,3 +96,23 @@ h1{
         margin-right: 5px;
     }
 }
+
+@media screen and (max-width: 320px) {
+    #searchInput{
+       width: 90%;
+    }
+
+    li{
+        font-size: 20px;
+        padding: 20px 20px;
+        font-size: 20px;
+    }
+
+    .result-img{
+        width:80px;
+        height:80px;
+        border-radius: 50%;
+        margin-right: 5px;
+    }
+}
+    
