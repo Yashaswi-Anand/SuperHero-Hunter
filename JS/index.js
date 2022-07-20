@@ -19,26 +19,26 @@ function superheroSearch(input){
   input.addEventListener('input', function(e){
     
     //console.log(this.value);
-    xhrRequest.open('GET', 'https://www.superheroapi.com/api.php/1182834895615033/search/'+this.value, true);
+    xhrRequest.open('GET', 'https://gateway.marvel.com/v1/public/characters?nameStartsWith='+this.value+'&ts=1658332513014&apikey=bd5eef2251cdf7a39ca803334bb51084&hash=c1a3dc88257417380bd76e7b919b6dff', true);
     
     // onload function to get data from API
     xhrRequest.onload = function(){
         //console.log(xhrRequest.response);
         var responceJson = JSON.parse(xhrRequest.response);
-        //console.log(responceJson.results);
+        console.log(responceJson.data.results);
         showResult.innerHTML = "";
-        var length = responceJson.results.length;
+        var length = responceJson.data.results.length;
         
         for(let i=0;i<length;i++){
-          var list = responceJson.results[i];
-          console.log(list.name, list.id);
+          var list = responceJson.data.results[i];
+          console.log(list.name, list.id,list.thumbnail.path+"."+list.thumbnail.extension);
           
           // Create a list item and append to the list
           var li = document.createElement("li");
           // add a list with the name and image of the superhero and style it
           li.innerHTML = '<a href="" class="each-item-list" id="'+list.id+'">'+
-          '<img class="result-img" src="'+list.image.url+'" alt=""></a>'+ list.name +
-          '<div class ="addFav" id="'+list.id+'" data-name="'+list.name+'" data-image="'+list.image.url+'"><i class="fa-regular fa-heart"></i></div>';
+          '<img class="result-img" src="'+list.thumbnail.path+"."+list.thumbnail.extension+'" alt=""></a>'+ list.name +
+          '<div class ="addFav" id="'+list.id+'" data-name="'+list.name+'" data-image="'+list.thumbnail.path+"."+list.thumbnail.extension+'"><i class="fa-regular fa-heart"></i></div>';
       
           // Append the li element to the result list
           showResult.appendChild(li);
