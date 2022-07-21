@@ -9,18 +9,16 @@ function fetchSuperheroProfile(){
     // onload function to get data from API
     xhrRequest.onload = function(){
         var responce = JSON.parse(xhrRequest.response);
-        //console.log(responce.data.results);
+        console.log(responce.data.results);
         var superheroData = responce.data.results[0];
         document.getElementById('name').innerHTML = superheroData.name;
         document.getElementById('superHeroImg').src = superheroData.thumbnail.path+"."+superheroData.thumbnail.extension;
-        document.getElementById('gender').innerHTML = superheroData.series.available;
-        // document.getElementById('height').innerHTML = responce.appearance.height[1];
-        // document.getElementById('weight').innerHTML = responce.appearance.weight[1];
-        // document.getElementById('speed').innerHTML = responce.powerstats.speed;
-        // document.getElementById('intelligence').innerHTML = responce.powerstats.intelligence;
-        // document.getElementById('strength').innerHTML = responce.powerstats.strength;
-        // document.getElementById('power').innerHTML = responce.powerstats.power;
-        // document.getElementById('eye').innerHTML = responce.appearance.eyeColor;
+        document.getElementById('series').innerHTML = superheroData.series.available;
+        document.getElementById('comics').innerHTML = superheroData.comics.available;
+        document.getElementById('stories').innerHTML = superheroData.stories.available;
+        document.getElementById('events').innerHTML = superheroData.events.available;
+        document.getElementById('description').innerHTML = superheroData.description==""?"No description here":superheroData.description;
+
     }
     xhrRequest.send();
 }

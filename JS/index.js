@@ -24,11 +24,25 @@ function superheroSearch(input){
     // onload function to get data from API
     xhrRequest.onload = function(){
         //console.log(xhrRequest.response);
+
+        // if status isn't 200, then show error and stop
+        if(xhrRequest.status != 200){
+            console.log('Error: ' + xhrRequest.status);
+            showResult.innerHTML = '<div class="empty-list">Empty List</div>';
+            return;
+        }
+        // if status is 200, then get data from API
         var responceJson = JSON.parse(xhrRequest.response);
-        console.log(responceJson.data.results);
+        console.log(responceJson);
         showResult.innerHTML = "";
         var length = responceJson.data.results.length;
-        
+
+        // if length is 0, then show empty list
+        if(length == 0){
+            showResult.innerHTML = '<div class="empty-list">Empty List</div>';
+            return;
+        }
+        // if length is not 0, then show data
         for(let i=0;i<length;i++){
           var list = responceJson.data.results[i];
           console.log(list.name, list.id,list.thumbnail.path+"."+list.thumbnail.extension);

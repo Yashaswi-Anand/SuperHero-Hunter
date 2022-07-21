@@ -6,7 +6,7 @@ function showAllFavorites(){
 
     // if favArray is empty, show the message you have no favorites
     if(favArray.length == 0){
-        listDiv.innerHTML = "<h1>You have no favorites yet!</h1>";
+        listDiv.innerHTML = '<div class="empty-list">Empty List!</div>';
         return;
     }
     
