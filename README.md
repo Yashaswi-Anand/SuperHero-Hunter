@@ -35,6 +35,6 @@
 
 <div>
     <img style="width:250px;" src="./Screenshots/mobile1.jpg"  style="display:inline-block"/>
-    <img style="width:250px;" src="./Screenshots/mobile1.jpg"  style="display:inline-block"/>
-    <img style="width:250px;" src="./Screenshots/mobile1.jpg"  style="display:inline-block"/>
+    <img style="width:250px;" src="./Screenshots/mobile2.jpg"  style="display:inline-block"/>
+    <img style="width:250px;" src="./Screenshots/mobile3.jpg"  style="display:inline-block"/>
 </div>
