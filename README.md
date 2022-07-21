@@ -8,9 +8,9 @@
 <h3> Features: </h3>
 
 <ul>
-    <li>List of superhero.</li>
-    <li>Full profile of superhero</li>
-    <li>See the favorites list of superhero</li>
+    <li>List of superheroes.</li>
+    <li>Full profile of superheroes.</li>
+    <li>See the favorites list of superheroes.</li>
 </ul>
 
 <h3> Technology used: </h3>
