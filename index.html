@@ -17,30 +17,15 @@
 
 <body>
      
-    <main>
-        
-        <div class="bg">
-            <div class="container" >
-                <!-- fixed input element -->
-                <div class="row p-1 ms-5 fixedLayout">
-                    <div>
-                        <h1 class="fontSize">SUPERHERO HUNTER</h1>
-                    </div>
-                    <div class="col-md-10 ms-5">
-                        <a href="./HTML/favorites.html"><h4 style="color: white; margin-left: 25px;">Favorites <i style="color: red;" class="fa fa-heart"></i> </h4></a>
-                        <input id="searchInput" type="text" placeholder="Superhero">
-                    </div>
-                </div>
-                
-                <!-- unordered list for show the result -->
-                <div class="col mt">
-                    <ul id="show-superhero-result"></ul>
-                </div>
-            
+    <main class="container">
+        <div class="col fixedLayout">
+            <h1 class="fontSize">SUPERHERO HUNTER</h1>
+            <div>
+                <a href="./HTML/favorites.html"><h4 class="favText">Favorites <i style="color: red;" class="fa fa-heart"></i> </h4></a>
+                <input id="searchInput" type="text" placeholder="Superhero">
             </div>
         </div>
-
-
+        <div class="col mt"><ul id="show-superhero-result"></ul></div>
     </main>
 </body>
 
