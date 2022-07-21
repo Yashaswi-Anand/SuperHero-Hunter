@@ -34,7 +34,7 @@
 <h5> Mobile View: </h5>
 
 <div>
-    <img style="width:300px;" src="./Screenshots/mobile1.jpg"  style="display:inline-block"/>
-    <img style="width:300px;" src="./Screenshots/mobile1.jpg"  style="display:inline-block"/>
-    <img style="width:300px;" src="./Screenshots/mobile1.jpg"  style="display:inline-block"/>
+    <img style="width:280px;" src="./Screenshots/mobile1.jpg"  style="display:inline-block"/>
+    <img style="width:280px;" src="./Screenshots/mobile1.jpg"  style="display:inline-block"/>
+    <img style="width:280px;" src="./Screenshots/mobile1.jpg"  style="display:inline-block"/>
 </div>
