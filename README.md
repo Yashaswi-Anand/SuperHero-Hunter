@@ -23,6 +23,8 @@
 
 <h3> ScreenShots: </h3>
 
+<h5> Desktop View: </h5>
+
 <div>
     <img src="./Screenshots/desktop1.png"  style="display:inline-block"/>
     <img src="./Screenshots/desktop2.png"  style="display:inline-block"/>
@@ -32,7 +34,7 @@
 <h5> Mobile View: </h5>
 
 <div>
-    <img src="./Screenshots/mobile1.jpg"  style="display:inline-block"/>
-    <img src="./Screenshots/mobile1.jpg"  style="display:inline-block"/>
-    <img src="./Screenshots/mobile1.jpg"  style="display:inline-block"/>
+    <img style="width:300px;" src="./Screenshots/mobile1.jpg"  style="display:inline-block"/>
+    <img style="width:300px;" src="./Screenshots/mobile1.jpg"  style="display:inline-block"/>
+    <img style="width:300px;" src="./Screenshots/mobile1.jpg"  style="display:inline-block"/>
 </div>
