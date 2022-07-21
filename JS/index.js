@@ -1,5 +1,3 @@
-// tokan -> 1182834895615033
-
 // Input field
 var searchInput = document.getElementById("searchInput");
 // Result list
@@ -28,7 +26,7 @@ function superheroSearch(input){
         // if status isn't 200, then show error and stop
         if(xhrRequest.status != 200){
             console.log('Error: ' + xhrRequest.status);
-            showResult.innerHTML = '<div class="empty-list">Empty List</div>';
+            showResult.innerHTML = '<div class="empty-list">No Data available</div>';
             return;
         }
         // if status is 200, then get data from API

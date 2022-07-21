@@ -17,7 +17,8 @@ body{
 .empty-list{
     text-align: center;
     font-size: 30px;
-    color: black;
+    color: blue;
+    font-weight: bold;
     font-family: 'Courier New', Courier, monospace;
 }
 
